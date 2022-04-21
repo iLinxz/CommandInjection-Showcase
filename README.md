@@ -1,2 +1,4 @@
 # CommandInjection-Showcase
-Command Injection showcase + remediation code.
+Command Injection showcase + remediation code. 
+
+Check out the 'master' branch.
