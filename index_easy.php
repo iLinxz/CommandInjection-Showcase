@@ -13,7 +13,7 @@
         <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
             <div>
                 <label for="name">Search for locally stored files...</label><br>
-                <input type="text" name="query" required="required" placeholder="Submit query!" />
+                <input type="text" name="query" placeholder="Submit query!" />
             </div>
             <button type="submit">Submit</button>
         </form>
