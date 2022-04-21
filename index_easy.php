@@ -19,8 +19,8 @@
         </form>
     <?php else : ?>
         <?php
-            if (isset($_POST['query'])){
-            $str = $_POST['query'];
+            if (isset($_POST["query"])){
+            $str = $_POST["query"];
             $filtered_string = preg_replace("/[^a-zA-Z0-9-_.]/", "", $str);
             if (strval(strlen($filtered_string)) === '0'){
                 echo "No input present.";
