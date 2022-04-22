@@ -23,19 +23,15 @@
             $str = $_POST["query"];
             $filtered_string = preg_replace("/[^a-zA-Z0-9-_.]/", "", $str);
             if (strval(strlen($filtered_string)) === '0'){
-                echo "No input present.";
-            }
+                echo "No input present.";}
             else{
             echo nl2br("SEARCHING FOR $filtered_string --> WHAT DID YOU FIND? \r\n");
-            echo "string is: $str";
             $command = ("/usr/bin/find . -name " . "'*" . $str . "*'" . " -ls 2>/dev/null");
-            echo "command ran is: $command";
+            echo "command is: $command";
             exec("/usr/bin/find . -name" . " '*" . $str . "*'" . " -ls 2>/dev/null", $output);
             foreach($output as $value){
                 echo $value."<br />";
-            }
-        }
-        }
+            }        }        }
         ?>
     <?php endif ?>
     </main>
