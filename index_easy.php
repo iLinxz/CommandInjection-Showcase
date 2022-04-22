@@ -26,7 +26,7 @@
                 echo "No input present.";
             }
             else{
-            echo nl2br("SEARCHING FOR $filtered_string --> WHAT DID YOU FIND? \r\n");
+            echo nl2br("WHAT DID YOU FIND? \r\n");
             exec("/usr/bin/find . -name $str -ls 2>/dev/null || /usr/bin/find . -name '$str*' -ls 2>/dev/null", $output);
             foreach($output as $value){
                 echo $value."<br />";

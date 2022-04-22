@@ -25,7 +25,7 @@
             if (strval(strlen($filtered_string)) === '0'){
                 echo "No input present.";}
             else{
-            echo nl2br("SEARCHING FOR $filtered_string --> WHAT DID YOU FIND? \r\n");
+            echo nl2br("WHAT DID YOU FIND? \r\n");
             $command = ("/usr/bin/find . -name " . "'*" . $str . "*'" . " -ls 2>/dev/null");
             echo "command is: $command";
             exec("/usr/bin/find . -name" . " '*" . $str . "*'" . " -ls 2>/dev/null", $output);
