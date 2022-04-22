@@ -21,8 +21,7 @@
         <?php
             if (isset($_POST["query"])){
             $str = $_POST["query"];
-            $filtered_string = preg_replace("/[^a-zA-Z0-9-_.]/", "", $str);
-            if (strval(strlen($filtered_string)) === '0'){
+            if (strval(strlen($str)) === '0'){
                 echo "No input present.";
             }
             else{
@@ -30,9 +29,7 @@
             exec("/usr/bin/find . -name $str -ls 2>/dev/null || /usr/bin/find . -name '$str*' -ls 2>/dev/null", $output);
             foreach($output as $value){
                 echo $value."<br />";
-            }
-        }
-        }
+            }        }        }
         ?>
     <?php endif ?>
     </main>
