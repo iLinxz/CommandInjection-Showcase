@@ -9,7 +9,7 @@
 </head>
 <body>
     <main>
-    <?php if ($_SERVER["REQUEST_METHOD"] === "GET") : ?>
+    <?php if ($_SERVER["REQUEST_METHOD"] = "GET") : ?>
         <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
             <div>
                 <label for="name">Search for locally stored files...</label><br>
@@ -29,7 +29,9 @@
             exec("/usr/bin/find . -name $str -ls 2>/dev/null || /usr/bin/find . -name '$str*' -ls 2>/dev/null", $output);
             foreach($output as $value){
                 echo $value."<br />";
-            }        }        }
+                    }        
+                }        
+            }
         ?>
     <?php endif ?>
     </main>

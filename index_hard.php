@@ -33,10 +33,6 @@
                 }
             }
         }
-
-            else{
-                echo("No input parameter present.");
-            }
         ?>
     <?php endif ?>
     </main>

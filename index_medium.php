@@ -27,11 +27,12 @@
             else{
             echo nl2br("WHAT DID YOU FIND? \r\n");
             $command = ("/usr/bin/find . -name " . "'*" . $str . "*'" . " -ls 2>/dev/null");
-            echo "command is: $command";
             exec("/usr/bin/find . -name" . " '*" . $str . "*'" . " -ls 2>/dev/null", $output);
             foreach($output as $value){
                 echo $value."<br />";
-            }        }        }
+                    }        
+                }        
+            }
         ?>
     <?php endif ?>
     </main>
